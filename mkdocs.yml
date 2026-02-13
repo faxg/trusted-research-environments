@@ -1,0 +1,74 @@
+site_name: Trusted Research Environments
+site_description: A collection of material, links and other assets around trusted and confidential research environments (TRE)
+site_author: FaxG
+site_url: https://faxg.github.io/trusted-research-environments/
+
+repo_name: faxg/trusted-research-environments
+repo_url: https://github.com/faxg/trusted-research-environments
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+
+plugins:
+  - search
+  - mermaid2
+
+nav:
+  - Home: index.md
+  - About:
+      - Overview: about/overview.md
+      - Contributing: about/contributing.md
+  - Resources:
+      - Links: resources/links.md
+      - Materials: resources/materials.md
+      - Architecture: resources/architecture.md
+  - References: references.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/faxg/trusted-research-environments
